@@ -17,8 +17,8 @@ def generate_images(prompt, negative_prompt, num_images_per_prompt, num_inferenc
 
 with st.sidebar:
     st.header("Configurações da Geração da Imagem")
-    prompt = st.text_area("Prompt", "")
-    negative_prompt = st.text_area("Negative Prompt", "")
+    prompt = st.text_area("O que deve ter na imagem?", "")
+    negative_prompt = st.text_area("O que NÃO deve ter na imagem", "")
     num_images_per_prompt = st.slider("Número de Imagens", min_value=1, max_value=5, value=1)
     num_inference_steps = st.number_input("Número de Passos de Inferência", min_value=1, max_value=100, value=50)
     height = st.selectbox("Altura da Imagem",[256,512,768,1024], index=1)
